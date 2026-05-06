@@ -1,6 +1,6 @@
 # USB Music Player
 
-A GUI program made with Python to provide a modern graphical interface for your music library on a USB drive or folder. Supports MP3, WAV, FLAC, MP4, and many more formats, with playback controls, queue/shuffle, and now playing info.
+A GUI program made with Python to provide a modern graphical interface for your music library on a USB drive or folder. Supports MP3, WAV, FLAC, MP4, and more, with playback controls, queue/shuffle, and now playing info.
 
 ---
 
@@ -15,25 +15,49 @@ A GUI program made with Python to provide a modern graphical interface for your 
 
 ---
 
-## Getting Started
-1. **Install dependencies**
+## 🚀 Installation (Quick Start)
+
+Follow these steps to quickly get the app up and running:
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/Aedan-Johnson/music-player.git
+   cd music-player
+   ```
+
+2. **(Recommended) Create a Virtual Environment**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate   # On Windows: venv\Scripts\activate
+   ```
+
+3. **Install Python Dependencies**
    ```bash
    pip install -r requirements.txt
    ```
 
-2. **Plug in your USB drive** (or prepare a music folder)
+4. **Install VLC Media Player (Required for Audio Playback)**
+   - **Windows/macOS:** [Download VLC](https://www.videolan.org/vlc/) and install it normally.
+   - **Linux (Ubuntu):**
+     ```bash
+     sudo apt install vlc
+     ```
+   - VLC must be available on your system PATH so `python-vlc` can use it!
 
-3. **Run the app:**
+5. **Plug in your USB drive** (or prepare a folder with music files).
+
+6. **Run the App**
    ```bash
    python src/main.py
    ```
 
-4. **Select your music folder** when prompted, or use the default USB scan.
+7. **Select your music folder** when prompted (or the app will try to auto-detect).
+
 
 ---
 
 ## Usage
-- Double-click a song to play it
+- Double-click a song in the list to play it
 - Use Play, Pause, Next, Previous for playback control
 - Hit Shuffle to randomize the queue
 - Click "Load Folder" to scan a different music source (like another USB drive)
@@ -41,9 +65,10 @@ A GUI program made with Python to provide a modern graphical interface for your 
 ---
 
 ## Troubleshooting
-- If no music appears, make sure your USB is mounted and contains supported files
-- The app will pick the first available folder with music under `/media` by default; you can select another folder with "Load Folder"
-- You may need VLC installed on your system for `python-vlc` playback (see [python-vlc docs](https://pypi.org/project/python-vlc/))
+- **No music appears:** Ensure your USB is mounted and contains music in supported formats.
+- **No sound:** Make sure VLC Player is installed and working on your system.
+- **App won’t start:** Ensure you are in the correct Python environment and dependencies are installed.
+- For advanced VLC errors, see [python-vlc documentation](https://pypi.org/project/python-vlc/) or [VLC support](https://www.videolan.org/support/).
 
 ---
 
